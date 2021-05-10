@@ -1,0 +1,17 @@
+{
+  "name": "wasm-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kucukkanat/wasm-boilerplate.git",
+  "author": "kucukkanat <htolgasahin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:go": "cd go && GOOS=js GOARCH=wasm go build -o ../main.wasm main.go",
+    "build": "yarn build:go",
+    "dev": "http-server"
+  },
+  "dependencies": {
+    "esbuild": "^0.11.20",
+    "http-server": "^0.12.3"
+  }
+}
